@@ -74,7 +74,7 @@ function bruteForce(array = []) {
   const rightInversion = bruteForce(right);
   const splitInversion = countSplitInversion(array);
   console.log(
-    `leftInversion ${leftInversion}\nrightInversion ${rightInversion}\nsplitInversion ${splitInversion} `
+    `leftInversion ${leftInversion}\nrightInversion ${rightInversion}\nsplitInversion ${splitInversion} `,
   );
   return leftInversion + rightInversion + splitInversion;
 }

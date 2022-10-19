@@ -3,7 +3,7 @@ export function karatsuba(number1 = 0, number2 = 0) {
   const term2 = String(number2);
   let n = 0;
   if (term1.length % 2 || term2.length % 2) {
-    console.log("default algorithm NOT karatsuba");
+    console.log('default algorithm NOT karatsuba');
     return parseInt(term1) * parseInt(term2);
   }
   if (term1.length == term2.length && term1.length != 1) {

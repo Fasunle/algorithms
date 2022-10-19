@@ -20,7 +20,7 @@ function merge(left = [], right = []) {
   // loop until one of the list is exhausted
   // i.e n operations where n = either left or right length
   while (left.length && right.length) {
-    console.log("merge is called in ", count++, "times\n");
+    console.log('merge is called in ', count++, 'times\n');
     if (left[0] < right[0]) {
       sortedArray.push(left.shift());
     } else {
@@ -47,15 +47,15 @@ function mergeSort(array = []) {
   // divide the array into two roughly equal halves
   const left = array.splice(0, n);
   const right = array;
-  console.log("reursive call is ", count2++, "\n");
+  console.log('reursive call is ', count2++, '\n');
   // return merge
   return merge(mergeSort(left), mergeSort(right));
 }
 
 // TESTING
 const test_data = [
-  5, 2, 8, 9, 100, 98, 600, 54, 23, 87, 4, 5, 76, 64, 12, 2, 3, 5, 2, 8, 9, 100,
-  98, 600, 54, 23, 87, 4, 5,
+  5, 2, 8, 9, 100, 98, 600, 54, 23, 87, 4, 5, 76, 64, 12, 2, 3, 5, 2, 8, 9, 100, 98, 600, 54, 23,
+  87, 4, 5,
 ];
 // console.log(mergeSort(test_data.slice(0, 5)));
 // console.log(test_data.slice(0, 5).length);
