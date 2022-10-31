@@ -3,7 +3,7 @@
  * write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
  *
  *
- * For a linear search, the time complexity is O(log n)
+ * For a binary search, the time complexity is O(log n)
  *
  * NOTE: for a binary search, the array must be sorted.
  */
