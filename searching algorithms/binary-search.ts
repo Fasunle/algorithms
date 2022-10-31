@@ -5,20 +5,27 @@
  *
  *
  * For a linear search, the time complexity is O(log n)
+ *
+ * NOTE: for a binary search, the array must be sorted.
  */
 
 let findTarget2 = (arr: number[], target: number): number => {
-  const searchKeyIndex = Math.floor(arr.length / 2); // middle of the array
   let start = 0;
   let end = arr.length;
 
-  while (start != end) {
+  while (start <= end) {
+    //   divide the array into halves in each interation
+    const searchKeyIndex = Math.floor((start + end) / 2); // middle of the array
     const searchKey = arr[searchKeyIndex];
+
+    //   target might be at the center
     if (target === searchKey) return searchKeyIndex;
 
+    //   target might be at the left
     if (target < searchKey) {
       end = searchKeyIndex - 1;
     } else {
+      //   target might be at the right
       start = searchKeyIndex + 1;
     }
   }
@@ -26,7 +33,7 @@ let findTarget2 = (arr: number[], target: number): number => {
   return -1;
 };
 
-let arr2 = [1, 2, 3, 4, 7, 12, 67, 34];
+let arr2 = [1, 2, 3, 4, 12, 34, 67, 78, 90, 102];
 let target2 = 12;
 
 console.log(findTarget2(arr2, target2));
